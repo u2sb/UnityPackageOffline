@@ -1,0 +1,16 @@
+{
+  "name": "com.u2sb.package-offline",
+  "displayName": "Unity Package Offline",
+  "description": "Convert upm package offline for use on computers without network connectivity",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "unityRelease": "25f1",
+  "dependencies": {
+    "com.cysharp.unitask": "2.5.0"
+  },
+  "documentationUrl": "https://github.com/u2sb/UnityPackageOffline",
+  "repository": {
+    "url": "https://github.com/u2sb/UnityPackageOffline.git",
+    "type": "git"
+  }
+}
