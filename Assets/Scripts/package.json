@@ -2,7 +2,7 @@
   "name": "com.u2sb.package-offline",
   "displayName": "Unity Package Offline",
   "description": "Convert upm package offline for use on computers without network connectivity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2019.4",
   "unityRelease": "25f1",
   "dependencies": {

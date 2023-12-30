@@ -1,0 +1,9 @@
+{
+    "name": "U2SB.PackageOffline.Editor",
+    "references": [
+        "UniTask"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}
