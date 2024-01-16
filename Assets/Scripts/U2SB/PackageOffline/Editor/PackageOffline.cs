@@ -13,7 +13,7 @@ namespace U2SB.PackageOffline.Editor
   /// </summary>
   public class PackageOffline : UnityEditor.Editor
   {
-    public static string LocalPackageDir = Path.Combine(Application.dataPath, "../", "LocalPackages");
+    public static string LocalPackageDir = Path.Combine(Application.dataPath, "../", "PackagesLocal");
 
     /// <summary>
     ///   转换为本地包
@@ -48,8 +48,10 @@ namespace U2SB.PackageOffline.Editor
         foreach (var s in a.Result)
           if (s.source is PackageSource.Registry or PackageSource.Git)
           {
-            var path = Path.Combine(LocalPackageDir, $"{s.name}-{s.version}.tgz");
-            path = new Uri(path).LocalPath;
+            var path = Path.GetRelativePath(
+              Application.dataPath,
+              Path.Combine(LocalPackageDir, $"{s.name}-{s.version}.tgz")
+            );
             pathList.Add($"file:{path}");
             if (File.Exists(path)) File.Delete(path);
             Debug.Log($"正在创建本地包 {s.name}...");
